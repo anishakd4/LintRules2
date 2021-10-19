@@ -1,0 +1,3 @@
+rootProject.name='LintRules2'
+include ':app'
+include ':rules'

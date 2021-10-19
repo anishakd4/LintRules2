@@ -1,0 +1,25 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+
+test {
+    useJUnitPlatform()
+}
+
+sourceCompatibility = "7"
+targetCompatibility = "7"
+
+dependencies {
+
+    compileOnly "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    compileOnly "com.android.tools.lint:lint:$lint_version"
+    compileOnly "com.android.tools.lint:lint-api:$lint_version"
+    compileOnly "com.android.tools.lint:lint-checks:$lint_version"
+
+    testImplementation "com.android.tools.lint:lint-tests:$lint_version"
+
+    testImplementation 'junit:junit:4.13'
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${junitJupiter_version}"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitJupiter_version}"
+
+}
